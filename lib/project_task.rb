@@ -1,4 +1,3 @@
-require_relative "repo"
 require_relative "issue"
 require_relative "timeline"
 
