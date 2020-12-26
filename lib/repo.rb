@@ -28,6 +28,12 @@ class Repo
     client.issue_timeline(repo_name, num, accept: ACCEPT_OPTIONS)
   end
 
+  def project_list
+    projects.map do |pj|
+      [pj.number, pj.name]
+    end
+  end
+
   def project(num)
     projects.detect do |pj|
       pj[:number] == num
