@@ -5,6 +5,7 @@ class Issue
     :number,
     :title,
     :labels,
+    :html_url,
   )
 
   def initialize(issue_response)
@@ -16,6 +17,7 @@ class Issue
       issue.number,
       issue.title,
       issue.labels.map(&:name),
+      issue.html_url,
     )
   end
 end

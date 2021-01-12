@@ -7,7 +7,7 @@ class ProjectTask
   Report = Struct.new(
     :number, :title,
     :accept_at_str, :done_at_str, :diff_str,
-    :labels,
+    :labels, :html_url
   )
 
   def initialize(repo, num)
@@ -25,6 +25,7 @@ class ProjectTask
       timeline.done_at_str,
       timeline.diff_str,
       issue.labels,
+      issue.html_url,
     )
   end
 
