@@ -24,6 +24,12 @@ class Project
     done_issues.map(&:report)
   end
 
+  def to_spread_sheet
+    report.each do |r|
+      puts r.values.join("\t")
+    end
+  end
+
   private
 
   def done_cards
